@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Wolfcore AI Background Remover</title>
+
+<meta name="description"
+content="Remove image backgrounds instantly with AI. Fast, free and professional background remover tool.">
+
+<meta name="keywords"
+content="background remover, remove bg, ai background remover, png maker">
+
+<meta name="author" content="Naveen">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="manifest" href="manifest.json">
+
+<link rel="icon" href="assets/favicon.png">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+
+</head>
+
+<body>
+
+<!-- ===========================
+NAVBAR
+=========================== -->
+
+<header class="navbar">
+
+<div class="container nav-container">
+
+<div class="logo">
+
+<img
+src="assets/wolfcore-logo.png"
+alt="Wolfcore Logo"
+class="logo-img">
+
+<span>Wolfcore AI Background Remover</span>
+
+</div>
+
+<nav>
+
+<ul class="nav-links">
+
+<li><a href="#home">Home</a></li>
+<li><a href="#features">Features</a></li>
+<li><a href="#pricing">Pricing</a></li>
+<li><a href="#faq">FAQ</a></li>
+
+</ul>
+
+</nav>
+
+<div class="nav-actions">
+
+<button id="darkModeBtn" class="dark-btn">
+<i class="fa-solid fa-moon"></i>
+</button>
+
+<a href="#upload" class="btn-primary">
+Try Free
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- ===========================
+HERO SECTION
+=========================== -->
+
+<section class="hero" id="home">
+
+<div class="container hero-container">
+
+<div class="hero-left">
+    <span class="hero-badge">
+🚀 Powered by Wolfcore AI
+</span>
+
+<h1>
+Remove Backgrounds
+<span>In Seconds</span>
+</h1>
+
+<p>
+Powered by Wolfcore AI. Upload any image and remove backgrounds instantly with professional quality.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#upload" class="btn-primary">
+Upload Image
+</a>
+
+<a href="#features" class="btn-secondary">
+Learn More
+</a>
+
+</div>
+
+<div class="stats">
+
+<div class="stat-box">
+<h3>1M+</h3>
+<p>Images Processed</p>
+</div>
+
+<div class="stat-box">
+<h3>99%</h3>
+<p>Accuracy</p>
+</div>
+
+<div class="stat-box">
+<h3>24/7</h3>
+<p>Available</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<img
+src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=900"
+alt="AI Background Remover"
+id="heroImage">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+UPLOAD SECTION
+=========================== -->
+
+<section class="upload-section" id="upload">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Upload Your Image</h2>
+
+<p>
+Drag and drop or choose an image to remove the background.
+</p>
+
+</div>
+
+<div class="upload-box" id="dropArea">
+
+<input
+type="file"
+id="fileInput"
+accept="image/*"
+hidden>
+
+<i class="fa-solid fa-cloud-arrow-up"></i>
+
+<h3>Drag & Drop Image Here</h3>
+
+<p>or</p>
+
+<button id="uploadBtn" class="btn-primary">
+Choose Image
+</button>
+
+</div>
+
+<div class="progress-wrapper">
+
+<div class="progress-bar">
+
+<div class="progress-fill" id="progressFill"></div>
+
+</div>
+
+<span id="progressText">0%</span>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+PREVIEW SECTION
+=========================== -->
+
+<section class="preview-section">
+
+<div class="container">
+
+<div class="preview-grid">
+
+<div class="preview-card">
+
+<h3>Original Image</h3>
+
+<img
+id="originalPreview"
+src=""
+alt="Original">
+
+</div>
+
+<div class="preview-card">
+
+<h3>Removed Background</h3>
+
+<img
+id="resultPreview"
+src=""
+alt="Result">
+
+</div>
+
+</div>
+
+<div class="download-actions">
+
+<button id="removeBgBtn" class="btn-primary">
+Remove Background
+</button>
+
+<button id="downloadPng" class="btn-success">
+Download PNG
+</button>
+
+<button id="downloadJpg" class="btn-secondary">
+Download JPG
+</button>
+
+</div>
+
+</div>
+
+</section>
+<!-- ===========================
+FEATURES SECTION
+=========================== -->
+
+<section class="features-section" id="features">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Powerful AI Features</h2>
+<p>Everything you need for professional background removal.</p>
+</div>
+
+<div class="features-grid">
+
+<div class="feature-card">
+<i class="fa-solid fa-bolt"></i>
+<h3>Fast Processing</h3>
+<p>Remove backgrounds within seconds using AI technology.</p>
+</div>
+
+<div class="feature-card">
+<i class="fa-solid fa-scissors"></i>
+<h3>Precise Cutout</h3>
+<p>Accurate edge detection for people, objects and products.</p>
+</div>
+
+<div class="feature-card">
+<i class="fa-solid fa-image"></i>
+<h3>HD Quality</h3>
+<p>Maintain image quality after removing the background.</p>
+</div>
+
+<div class="feature-card">
+<i class="fa-solid fa-palette"></i>
+<h3>Background Color</h3>
+<p>Replace transparent backgrounds with any color instantly.</p>
+</div>
+
+<div class="feature-card">
+<i class="fa-solid fa-download"></i>
+<h3>PNG Export</h3>
+<p>Download transparent PNG files in one click.</p>
+</div>
+
+<div class="feature-card">
+<i class="fa-solid fa-mobile-screen"></i>
+<h3>Responsive</h3>
+<p>Works perfectly on desktop, tablet and mobile devices.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+BEFORE AFTER SECTION
+=========================== -->
+
+<section class="comparison-section">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Before & After</h2>
+<p>Compare the original image with the AI processed result.</p>
+</div>
+
+<div class="comparison-container">
+
+<div class="comparison-image">
+
+<img
+src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=900"
+alt="Before">
+
+<div class="comparison-overlay">
+
+<img
+src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=900"
+alt="After">
+
+</div>
+
+<input
+type="range"
+min="0"
+max="100"
+value="50"
+class="slider"
+id="comparisonSlider">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+BACKGROUND COLOR CHANGER
+=========================== -->
+
+<section class="bg-color-section">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Background Color Changer</h2>
+<p>Choose a background color instantly.</p>
+</div>
+
+<div class="color-options">
+
+<button class="color-btn" data-color="#ffffff"></button>
+
+<button class="color-btn" data-color="#000000"></button>
+
+<button class="color-btn" data-color="#2563eb"></button>
+
+<button class="color-btn" data-color="#16a34a"></button>
+
+<button class="color-btn" data-color="#dc2626"></button>
+
+<button class="color-btn" data-color="#f59e0b"></button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+TESTIMONIALS
+=========================== -->
+
+<section class="testimonial-section">
+
+<div class="container">
+
+<div class="section-title">
+<h2>What Users Say</h2>
+<p>Thousands of creators trust our AI.</p>
+</div>
+
+<div class="testimonial-grid">
+
+<div class="testimonial-card">
+
+<img
+src="https://randomuser.me/api/portraits/women/44.jpg"
+alt="User">
+
+<h3>Sarah</h3>
+
+<p>
+Amazing tool! The results are clean and very professional.
+</p>
+
+</div>
+
+<div class="testimonial-card">
+
+<img
+src="https://randomuser.me/api/portraits/men/32.jpg"
+alt="User">
+
+<h3>Michael</h3>
+
+<p>
+Best background remover I have used so far.
+</p>
+
+</div>
+
+<div class="testimonial-card">
+
+<img
+src="https://randomuser.me/api/portraits/women/68.jpg"
+alt="User">
+
+<h3>Emily</h3>
+
+<p>
+Fast, simple and perfect for e-commerce images.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+PRICING SECTION
+=========================== -->
+
+<section class="pricing-section" id="pricing">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Pricing Plans</h2>
+
+<p>
+Choose the plan that suits your needs.
+</p>
+
+</div>
+
+<div class="pricing-grid">
+
+<div class="pricing-card">
+
+<h3>Free</h3>
+
+<h1>₹0</h1>
+
+<ul>
+
+<li>5 Images / Day</li>
+
+<li>Standard Quality</li>
+
+<li>PNG Download</li>
+
+<li>Basic Support</li>
+
+</ul>
+
+<button class="btn-secondary">
+Get Started
+</button>
+
+</div>
+
+<div class="pricing-card popular">
+
+<span class="popular-badge">
+Most Popular
+</span>
+
+<h3>Pro</h3>
+
+<h1>₹499</h1>
+
+<ul>
+
+<li>Unlimited Images</li>
+
+<li>HD Quality</li>
+
+<li>PNG + JPG Export</li>
+
+<li>Priority Support</li>
+
+<li>API Access</li>
+
+</ul>
+
+<button class="btn-primary">
+Choose Plan
+</button>
+
+</div>
+
+<div class="pricing-card">
+
+<h3>Business</h3>
+
+<h1>₹1999</h1>
+
+<ul>
+
+<li>Everything in Pro</li>
+
+<li>Team Access</li>
+
+<li>Bulk Processing</li>
+
+<li>Dedicated Support</li>
+
+<li>Custom API Limits</li>
+
+</ul>
+
+<button class="btn-secondary">
+Contact Sales
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ===========================
+FAQ SECTION
+=========================== -->
+
+<section class="faq-section" id="faq">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Frequently Asked Questions</h2>
+<p>Find answers to common questions.</p>
+</div>
+
+<div class="faq-container">
+
+<div class="faq-item">
+<button class="faq-question">
+How does AI background removal work?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+<p>
+Our AI automatically detects the subject in the image
+and removes the background while preserving details.
+</p>
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">
+Is it free to use?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+<p>
+Yes. A free plan is available with limited image processing.
+</p>
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">
+Can I download transparent PNG files?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+<p>
+Yes. You can export transparent PNG images after processing.
+</p>
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">
+Does it work on mobile?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+<p>
+Yes. The website is fully responsive and works on all devices.
+</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+CONTACT SECTION
+=========================== -->
+
+<section class="contact-section" id="contact">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Contact Us</h2>
+<p>Have questions? Send us a message.</p>
+</div>
+
+<form class="contact-form">
+
+<div class="form-group">
+<input
+type="text"
+placeholder="Your Name"
+required>
+</div>
+
+<div class="form-group">
+<input
+type="email"
+placeholder="Your Email"
+required>
+</div>
+
+<div class="form-group">
+<textarea
+rows="6"
+placeholder="Your Message"
+required></textarea>
+</div>
+
+<button type="submit" class="btn-primary">
+Send Message
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<!-- ===========================
+NEWSLETTER SECTION
+=========================== -->
+
+<section class="newsletter-section">
+
+<div class="container newsletter-container">
+
+<h2>Subscribe To Newsletter</h2>
+
+<p>
+Get product updates, AI news and feature releases.
+</p>
+
+<div class="newsletter-form">
+
+<input
+type="email"
+placeholder="Enter your email">
+
+<button class="btn-primary">
+Subscribe
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+FOOTER
+=========================== -->
+
+<footer class="footer">
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div class="footer-col">
+
+<h3>RemoveAI</h3>
+
+<p>
+Professional AI background remover for creators,
+designers and businesses.
+</p>
+
+</div>
+
+<div class="footer-col">
+
+<h3>Quick Links</h3>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+<li><a href="#features">Features</a></li>
+<li><a href="#pricing">Pricing</a></li>
+<li><a href="#faq">FAQ</a></li>
+
+</ul>
+
+</div>
+
+<div class="footer-col">
+
+<h3>Resources</h3>
+
+<ul>
+
+<li><a href="#">Documentation</a></li>
+<li><a href="#">API</a></li>
+<li><a href="#">Help Center</a></li>
+<li><a href="#">Support</a></li>
+
+</ul>
+
+</div>
+
+<div class="footer-col">
+
+<h3>Follow Us</h3>
+
+<div class="social-links">
+
+<a href="#">
+<i class="fab fa-facebook-f"></i>
+</a>
+
+<a href="#">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="#">
+<i class="fab fa-x-twitter"></i>
+</a>
+
+<a href="#">
+<i class="fab fa-linkedin-in"></i>
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="footer-bottom">
+
+<p>
+© 2026 RemoveAI. All Rights Reserved.
+</p>
+
+</div>
+
+</div>
+
+</footer>
+
+<!-- ===========================
+SCRIPT
+=========================== -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
