@@ -1,11 +1,9 @@
 from fastapi import FastAPI, UploadFile, File
 from fastapi.responses import Response
-from rembg import remove
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-# CORS fix (VERY IMPORTANT for Vercel frontend)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -16,10 +14,8 @@ app.add_middleware(
 
 @app.get("/")
 def home():
-    return {"status": "AI Background remover is running"}
+    return {"status": "API running"}
 
 @app.post("/remove-bg")
 async def remove_bg(file: UploadFile = File(...)):
-    input_image = await file.read()
-    output_image = remove(input_image)
-    return Response(content=output_image, media_type="image/png")
+    return {"error": "Backend deployed successfully but AI model not attached yet"}
